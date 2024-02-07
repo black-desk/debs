@@ -1,3 +1,6 @@
+/*.deb
+/*.buildinfo
+/*.changes
 /io.neovim.neovim-nightly/nvim-linux64
 /io.neovim.neovim-nightly/opt/io.neovim.neovim-nightly
 /io.neovim.neovim-nightly/nvim-linux64.tar.gz
