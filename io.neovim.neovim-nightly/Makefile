@@ -1,6 +1,10 @@
 .PHONY: all
 all: unpack
 
+.PHONY: clean
+clean:
+	rm -rf ./nvim-linux64
+
 .PHONY: unpack
 unpack: download
 	tar -zxvf nvim-linux64.tar.gz
