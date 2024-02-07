@@ -1,9 +1,11 @@
 #!/bin/env bash
 
+set -e
+
 GIT=${GIT:="git"}
 
 repoRoot="$("$GIT" rev-parse --show-toplevel)"
-cd "$repoRoot/tools"
+cd "$repoRoot/io.neovim.neovim-nightly/tools"
 
 VERSION=${VERSION:="$(
 	gh release view -R neovim/neovim nightly --json body |

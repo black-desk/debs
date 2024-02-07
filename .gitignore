@@ -1,8 +1,8 @@
-nvim-linux64
-opt/io.neovim.neovim-nightly
-nvim-linux64.tar.gz
-debian/.debhelper
-debian/io.neovim.neovim-nightly
-debian/debhelper-build-stamp
-debian/files
-debian/io.neovim.neovim-nightly.substvars
+/io.neovim.neovim-nightly/nvim-linux64
+/io.neovim.neovim-nightly/opt/io.neovim.neovim-nightly
+/io.neovim.neovim-nightly/nvim-linux64.tar.gz
+/*/debian/.debhelper
+/io.neovim.neovim-nightly/debian/io.neovim.neovim-nightly
+/*/debian/debhelper-build-stamp
+/*/debian/files
+/io.neovim.neovim-nightly/debian/io.neovim.neovim-nightly.substvars
