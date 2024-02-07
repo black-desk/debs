@@ -10,7 +10,7 @@ unpack: download
 	tar -zxvf nvim-linux64.tar.gz
 	mkdir -p opt
 	rm -rf opt/io.neovim.neovim-nightly
-	cp -r nvim-linux64 opt/io.neovim.neovim-nightly
+	mv nvim-linux64 opt/io.neovim.neovim-nightly
 
 .PHONY: download
 download: nvim-linux64.tar.gz
