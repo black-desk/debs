@@ -15,3 +15,5 @@ VERSION=${VERSION:="$(
 )"}
 
 sed -i 's/(.*)/('"$VERSION"')/' ../debian/changelog
+
+dpkg-buildpackage -us -uc -b

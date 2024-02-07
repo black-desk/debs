@@ -2,9 +2,13 @@
 
 set -e
 
-for dir in */ ; do
-        pushd "$dir"
-        sudo apt build-dep .
-        dpkg-buildpackage -us -uc -b
-        popd
+for dir in */; do
+	pushd "$dir"
+	sudo apt build-dep .
+	if [ -f ./tools/package.sh ]; then
+		./tools/buildpackage.sh
+	else
+		dpkg-buildpackage -us -uc -b
+	fi
+	popd
 done
