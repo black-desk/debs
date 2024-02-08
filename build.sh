@@ -2,6 +2,9 @@
 
 set -e
 
+sudo apt update
+sudo apt install debhelper
+
 for dir in */; do
 	pushd "$dir"
 	if [ -f ./tools/buildpackage.sh ]; then
