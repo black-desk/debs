@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depthdepth: 0
+          fetch-depth: 0
 
       - name: Build packages
         run: ./build.sh
