@@ -2,7 +2,7 @@
 
 set -e
 
-sudo apt install devscripts
+sudo apt install devscripts equivs
 
 for dir in */; do
 	pushd "$dir"
