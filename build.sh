@@ -2,9 +2,12 @@
 
 set -e
 
+sudo apt install devscripts
+
 for dir in */; do
 	pushd "$dir"
-	sudo apt build-dep .
+        mk-build-deps
+        sudo apt install ./*.deb
 	if [ -f ./tools/buildpackage.sh ]; then
 		./tools/buildpackage.sh
 	else
