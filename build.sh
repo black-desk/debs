@@ -5,7 +5,7 @@ set -e
 for dir in */; do
 	pushd "$dir"
 	sudo apt build-dep .
-	if [ -f ./tools/package.sh ]; then
+	if [ -f ./tools/buildpackage.sh ]; then
 		./tools/buildpackage.sh
 	else
 		dpkg-buildpackage -us -uc -b
