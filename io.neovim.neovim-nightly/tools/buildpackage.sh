@@ -5,7 +5,7 @@ set -e
 GIT=${GIT:="git"}
 
 repoRoot="$("$GIT" rev-parse --show-toplevel)"
-cd "$repoRoot/io.neovim.neovim-nightly/tools"
+pushd "$repoRoot/io.neovim.neovim-nightly/tools"
 
 VERSION=${VERSION:="$(
 	gh release view -R neovim/neovim nightly --json body |
@@ -15,5 +15,6 @@ VERSION=${VERSION:="$(
 )"}
 
 sed -i 's/(.*)/('"$VERSION"')/' ../debian/changelog
+popd
 
 dpkg-buildpackage -us -uc -b
