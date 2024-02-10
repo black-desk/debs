@@ -1,0 +1,12 @@
+Source: app.typst.typst
+Maintainer: Chen Linxuan <me@black-desk.cn>
+Section: text
+Priority: optional
+Standards-Version: 4.6.2
+Build-Depends: wget,
+               debhelper-compat (= 13)
+
+Package: app.typst.typst
+Architecture: amd64
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: Typst cli convert from github release
