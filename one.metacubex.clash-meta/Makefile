@@ -9,8 +9,10 @@ opt/one.metacubex.clash-meta/bin/clash-meta: clash-meta-version
 	env VERSION=$(shell cat clash-meta-version) OUTPUT=$@ \
 		./tools/download-clash-meta.sh
 
-.PHONY: clash-meta-version
-clash-meta-version:
+clash-meta-version: get-clash-meta-version
+
+.PHONY: get-clash-meta-version
+get-clash-meta-version:
 	./tools/get-github-release-version.sh MetaCubeX/mihomo clash-meta-version
 
 .PHONY: install
