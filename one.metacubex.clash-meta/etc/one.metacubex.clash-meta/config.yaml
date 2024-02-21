@@ -1,0 +1,7 @@
+mixed-port: 7890
+geox-url:
+  mmdb: "https://mirror.ghproxy.com/https://github.com/MetaCubeX/meta-rules-dat/raw/release/country.mmdb"
+geo-auto-update: true
+geo-update-interval: 24
+rules:
+  - MATCH,DIRECT

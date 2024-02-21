@@ -1,0 +1,25 @@
+# vim: ft=systemd
+
+[Unit]
+Description=Another rule-based tunnel in Go.
+After=network.target NetworkManager.service systemd-networkd.service iwd.service
+
+[Service]
+ProtectHome=true
+ProtectSystem=full
+PrivateTmp=true
+ProtectKernelTunables=true
+ProtectControlGroups=true
+
+NoNewPrivileges=true
+MemoryDenyWriteExecute=true
+
+StateDirectory=one.metacubex.clash-meta
+
+ConfigurationDirectory=one.metacubex.clash-meta
+ConfigurationDirectoryMode=0555
+
+ExecStart=/opt/one.metacubex.clash-meta/bin/clash-meta -d $STATE_DIRECTORY -f ${CONFIGURATION_DIRECTORY}/config.yaml
+
+[Install]
+WantedBy=multi-user.target
