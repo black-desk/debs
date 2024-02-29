@@ -1,3 +1,6 @@
 [submodule "io.github.black-desk.debian-tweak"]
 	path = io.github.black-desk.debian-tweak
 	url = https://github.com/black-desk/debian-tweak
+[submodule ".format"]
+	path = .format
+	url = https://github.com/black-desk/.format
