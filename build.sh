@@ -14,3 +14,5 @@ for dir in */; do
 	fi
 	popd
 done
+
+wget https://discord.com/api/download/stable?platform=linux&format=deb
