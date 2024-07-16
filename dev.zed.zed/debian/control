@@ -1,0 +1,12 @@
+Source: dev.zed.zed
+Maintainer: Chen Linxuan <me@black-desk.cn>
+Section: devel
+Priority: optional
+Standards-Version: 4.6.2
+Build-Depends: wget,
+               debhelper-compat (= 13)
+
+Package: dev.zed.zed
+Architecture: amd64
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: Zed convert from github release
