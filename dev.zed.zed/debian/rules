@@ -3,4 +3,4 @@
 	dh $@
 
 override_dh_shlibdeps:
-	dh_shlibdeps -l/opt/dev.zed.zed/lib
+	dh_shlibdeps -l/opt/dev.zed.Zed/lib
