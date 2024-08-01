@@ -1,0 +1,12 @@
+Source: dev.neovide.neovide
+Maintainer: Chen Linxuan <me@black-desk.cn>
+Section: text
+Priority: optional
+Standards-Version: 4.6.2
+Build-Depends: wget,
+               debhelper-compat (= 13)
+
+Package: dev.neovide.neovide
+Architecture: amd64
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: Neovide convert from github release
