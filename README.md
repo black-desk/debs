@@ -5,8 +5,14 @@ to convert others github release asserts to .deb files.
 
 ## Packages
 
+- [app.typst.typst](./app.typst.typst)
+- [dev.neovide.neovide](./dev.neovide.neovide)
+- [dev.zed.zed](./dev.zed.zed)
 - [io.github.black-desk.debian-tweak](./io.github.black-desk.debian-tweak)
 - [io.neovim.neovim-nightly](./io.neovim.neovim-nightly)
+- [io.neovim.neovim](./io.neovim.neovim)
+- [one.metacubex.clash-meta](./one.metacubex.clash-meta)
+- [org.pimalaya.himalaya](./org.pimalaya.himalaya)
 
 Check [black-desk/ppa](https://github.com/black-desk/ppa) for apt repository.
 
