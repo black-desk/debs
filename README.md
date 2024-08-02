@@ -7,6 +7,7 @@ to convert others github release asserts to .deb files.
 
 - [app.typst.typst](./app.typst.typst)
 - [dev.neovide.neovide](./dev.neovide.neovide)
+- [dev.zed.zed-pre](./dev.zed.zed-pre)
 - [dev.zed.zed](./dev.zed.zed)
 - [io.github.black-desk.debian-tweak](./io.github.black-desk.debian-tweak)
 - [io.neovim.neovim-nightly](./io.neovim.neovim-nightly)
