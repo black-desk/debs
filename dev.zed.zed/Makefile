@@ -13,6 +13,7 @@ unpack: download
 	mv zed.app opt/dev.zed.Zed
 	sed -i '/\[Desktop Entry\]/a StartupWMClass=dev.zed.Zed' opt/dev.zed.Zed/share/applications/zed.desktop
 	sed -i '/StartupNotify=true/d' opt/dev.zed.Zed/share/applications/zed.desktop
+	sed -i 's/Exec=zed/Exec=\/opt\/dev.zed.Zed\/bin\/zed/' opt/dev.zed.Zed/share/applications/zed.desktop
 	mv opt/dev.zed.Zed/share/applications/zed.desktop opt/dev.zed.Zed/share/applications/dev.zed.Zed.desktop
 
 .PHONY: download

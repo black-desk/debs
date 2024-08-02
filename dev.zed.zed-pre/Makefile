@@ -13,7 +13,10 @@ unpack: download
 	mv zed-preview.app opt/dev.zed.Zed-pre
 	sed -i '/\[Desktop Entry\]/a StartupWMClass=dev.zed.Zed-Preview' opt/dev.zed.Zed-pre/share/applications/zed-preview.desktop
 	sed -i '/StartupNotify=true/d' opt/dev.zed.Zed-pre/share/applications/zed-preview.desktop
-	mv opt/dev.zed.Zed-pre/share/applications/zed-preview.desktop opt/dev.zed.Zed-pre/share/applications/dev.zed.Zed.desktop
+	sed -i 's/Icon=zed/Icon=zed-preview/' opt/dev.zed.Zed-pre/share/applications/zed-preview.desktop
+	mv opt/dev.zed.Zed-pre/share/icons/hicolor/1024x1024/apps/zed.png opt/dev.zed.Zed-pre/share/icons/hicolor/1024x1024/apps/zed-preview.png
+	mv opt/dev.zed.Zed-pre/share/icons/hicolor/512x512/apps/zed.png opt/dev.zed.Zed-pre/share/icons/hicolor/512x512/apps/zed-preview.png
+	mv opt/dev.zed.Zed-pre/share/applications/zed-preview.desktop opt/dev.zed.Zed-pre/share/applications/dev.zed.Zed-Preview.desktop
 
 .PHONY: download
 download: zed-linux-x86_64.tar.gz
