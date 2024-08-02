@@ -9,7 +9,7 @@ clean:
 .PHONY: unpack
 unpack: download
 	tar -zxvf ./neovide-linux-x86_64.tar.gz
-	rm -rf opt/dev.neovide.neovide
+	rm -rf opt/dev.neovide.neovide/bin
 	mkdir -p opt/dev.neovide.neovide/bin
 	mv neovide opt/dev.neovide.neovide/bin
 
@@ -18,7 +18,6 @@ download: neovide-linux-x86_64.tar.gz
 
 neovide-linux-x86_64.tar.gz:
 	wget https://github.com/neovide/neovide/releases/latest/download/neovide-linux-x86_64.tar.gz
-
 
 .PHONY: install
 install:
