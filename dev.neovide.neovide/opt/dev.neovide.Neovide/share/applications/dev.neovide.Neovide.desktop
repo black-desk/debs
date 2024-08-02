@@ -1,10 +1,10 @@
 [Desktop Entry]
-StartupWMClass=dev.neovide.neovide
+StartupWMClass=neovide
 Type=Application
 Name=Neovide
 GenericName=Text Editor
 Comment=No Nonsense Neovim Client in Rust.
-TryExec=/opt/dev.neovide.neovide/bin/neovide
+TryExec=/opt/dev.neovide.Neovide/bin/neovide
 Exec=neovide %U
 Icon=neovide
 Categories=Utility;TextEditor;Development;IDE;

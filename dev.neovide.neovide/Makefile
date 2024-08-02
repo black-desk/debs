@@ -9,9 +9,9 @@ clean:
 .PHONY: unpack
 unpack: download
 	tar -zxvf ./neovide-linux-x86_64.tar.gz
-	rm -rf opt/dev.neovide.neovide/bin
-	mkdir -p opt/dev.neovide.neovide/bin
-	mv neovide opt/dev.neovide.neovide/bin
+	rm -rf opt/dev.neovide.Neovide/bin
+	mkdir -p opt/dev.neovide.Neovide/bin
+	mv neovide opt/dev.neovide.Neovide/bin
 
 .PHONY: download
 download: neovide-linux-x86_64.tar.gz
@@ -21,7 +21,5 @@ neovide-linux-x86_64.tar.gz:
 
 .PHONY: install
 install:
-	find etc opt -type f -perm 0755 \
-		-exec install {} -m 0755 -D ${DESTDIR}/{} \;
-	find etc opt -type f -perm 0644 \
-		-exec install {} -m 0644 -D ${DESTDIR}/{} \;
+	cp -a opt/ ${DESTDIR}/
+	find etc -type f -exec install {} -m 0644 -D ${DESTDIR}/{} \;
