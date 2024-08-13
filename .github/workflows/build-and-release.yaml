@@ -1,3 +1,5 @@
+name: Build debs and release
+
 on:
   push:
     branches:
