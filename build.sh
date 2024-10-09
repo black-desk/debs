@@ -14,5 +14,3 @@ for dir in */; do
 	fi
 	popd
 done
-
-wget -O discord.deb "https://discord.com/api/download/stable?platform=linux&format=deb"
