@@ -1,9 +1,17 @@
-if [[ :$PATH: != *:/opt/dev.neovide.Neovide/bin:* ]]; then
+#!/usr/bin/env sh
+
+case :"$PATH": in
+*:/opt/dev.neovide.Neovide/bin:*) ;;
+*)
 	PATH=/opt/dev.neovide.Neovide/bin:${PATH:-/usr/local/bin:/usr/bin}
-fi
+	;;
+esac
 export PATH
 
-if [[ :$XDG_DATA_DIRS: != *:/opt/dev.neovide.Neovide/share:* ]]; then
+case :"$XDG_DATA_DIRS": in
+*:/opt/dev.neovide.Neovide/share:*) ;;
+*)
 	XDG_DATA_DIRS=/opt/dev.neovide.Neovide/share:${XDG_DATA_DIRS:-/usr/local/share:/usr/share}
-fi
+	;;
+esac
 export XDG_DATA_DIRS

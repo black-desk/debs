@@ -1,9 +1,17 @@
-if [[ :$PATH: != *:/opt/dev.zed.Zed/bin:* ]]; then
+#!/usr/bin/env sh
+
+case :"$PATH": in
+*:/opt/dev.zed.Zed/bin:*) ;;
+*)
 	PATH=/opt/dev.zed.Zed/bin:${PATH:-/usr/local/bin:/usr/bin}
-fi
+	;;
+esac
 export PATH
 
-if [[ :$XDG_DATA_DIRS: != *:/opt/dev.zed.Zed/share:* ]]; then
+case :"$XDG_DATA_DIRS": in
+*:/opt/dev.zed.Zed/share:*) ;;
+*)
 	XDG_DATA_DIRS=/opt/dev.zed.Zed/share:${XDG_DATA_DIRS:-/usr/local/share:/usr/share}
-fi
+	;;
+esac
 export XDG_DATA_DIRS

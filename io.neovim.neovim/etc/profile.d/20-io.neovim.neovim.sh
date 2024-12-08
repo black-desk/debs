@@ -1,9 +1,17 @@
-if [[ :$PATH: != *:/opt/io.neovim.neovim/bin:* ]]; then
+#!/usr/bin/env sh
+
+case :"$PATH": in
+*:/opt/io.neovim.neovim/bin:*) ;;
+*)
 	PATH=/opt/io.neovim.neovim/bin:${PATH:-/usr/local/bin:/usr/bin}
-fi
+	;;
+esac
 export PATH
 
-if [[ :$XDG_DATA_DIRS: != *:/opt/io.neovim.neovim/share:* ]]; then
+case :"$XDG_DATA_DIRS": in
+*:/opt/io.neovim.neovim/share:*) ;;
+*)
 	XDG_DATA_DIRS=/opt/io.neovim.neovim/share:${XDG_DATA_DIRS:-/usr/local/share:/usr/share}
-fi
+	;;
+esac
 export XDG_DATA_DIRS

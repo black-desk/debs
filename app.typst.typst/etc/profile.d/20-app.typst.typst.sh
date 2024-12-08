@@ -1,9 +1,17 @@
-if [[ :$PATH: != *:/opt/app.typst.typst/bin:* ]]; then
+#!/usr/bin/env sh
+
+case :"$PATH": in
+*:/opt/app.typst.typst/bin:*) ;;
+*)
 	PATH=/opt/app.typst.typst/bin:${PATH:-/usr/local/bin:/usr/bin}
-fi
+	;;
+esac
 export PATH
 
-if [[ :$XDG_DATA_DIRS: != *:/opt/app.typst.typst/share:* ]]; then
+case :"$XDG_DATA_DIRS": in
+*:/opt/app.typst.typst/share:*) ;;
+*)
 	XDG_DATA_DIRS=/opt/app.typst.typst/share:${XDG_DATA_DIRS:-/usr/local/share:/usr/share}
-fi
+	;;
+esac
 export XDG_DATA_DIRS

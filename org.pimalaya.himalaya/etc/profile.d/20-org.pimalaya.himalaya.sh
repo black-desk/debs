@@ -1,11 +1,17 @@
-#!/bin/sh
+#!/usr/bin/env sh
 
-if echo ":$PATH:" | grep -q '.*:/opt/org.pimalaya.himalaya/bin:.*'; then
+case :"$PATH": in
+*:/opt/org.pimalaya.himalaya/bin:*) ;;
+*)
 	PATH=/opt/org.pimalaya.himalaya/bin:${PATH:-/usr/local/bin:/usr/bin}
-fi
+	;;
+esac
 export PATH
 
-if echo ":$XDG_DATA_DIRS:" | grep -q '.*:/opt/org.pimalaya.himalaya/share:.*'; then
+case :"$XDG_DATA_DIRS": in
+*:/opt/org.pimalaya.himalaya/share:*) ;;
+*)
 	XDG_DATA_DIRS=/opt/org.pimalaya.himalaya/share:${XDG_DATA_DIRS:-/usr/local/share:/usr/share}
-fi
+	;;
+esac
 export XDG_DATA_DIRS
