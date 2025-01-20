@@ -3,7 +3,7 @@
 set -e
 
 sudo apt update
-sudo apt install debhelper
+sudo apt install debhelper build-essential
 
 for dir in */; do
 	pushd "$dir"
