@@ -4,3 +4,7 @@
 [submodule ".format"]
 	path = .format
 	url = https://github.com/black-desk/.format
+[submodule "distcc"]
+	path = distcc
+	url = https://github.com/black-desk/distcc
+	branch = master
