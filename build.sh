@@ -3,7 +3,7 @@
 set -e
 
 sudo apt update
-sudo apt install devscripts equivs
+sudo apt install -y devscripts equivs build-essential
 
 for dir in */; do
 	pushd "$dir"
@@ -11,7 +11,7 @@ for dir in */; do
 		./tools/buildpackage.sh
 	else
 		mk-build-deps
-		sudo apt install -y -- *.deb
+		sudo apt install -y -- ./*.deb
 		dpkg-buildpackage -us -uc -b
 	fi
 	popd
