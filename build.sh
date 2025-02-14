@@ -1,7 +1,7 @@
 #!/bin/env bash
 
 set -e
-set +x
+set -x
 
 sudo apt update
 sudo apt install -y devscripts equivs build-essential
