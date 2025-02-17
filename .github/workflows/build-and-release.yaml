@@ -20,7 +20,7 @@ jobs:
     steps:
       - run: |
           apt update
-          apt install git -y
+          apt install git sudo -y
  
       - uses: actions/checkout@v4
         with:
