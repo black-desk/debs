@@ -18,6 +18,10 @@ jobs:
     container:
       image: ubuntu:24.04
     steps:
+      - run: |
+          apt update
+          apt install git
+ 
       - uses: actions/checkout@v4
         with:
           submodules: true
