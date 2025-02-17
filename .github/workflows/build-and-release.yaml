@@ -18,10 +18,10 @@ jobs:
     container:
       image: ubuntu:24.04
     steps:
-      - name: Install git
+      - name: Install some packages
         run: |
           apt update
-          apt install -y git
+          apt install -y git sudo
 
       - uses: actions/checkout@v4
         with:
