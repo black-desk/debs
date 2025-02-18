@@ -14,7 +14,7 @@ for dir in */; do
 	fi
 
 	mk-build-deps
-	sudo apt install -- \*.deb
+	sudo apt install -- *.deb
 	DEB_BUILD_OPTIONS="nocheck" dpkg-buildpackage -us -uc -b
 	sudo apt remove -y -- \*-build-deps
 	sudo apt autoremove
