@@ -10,10 +10,11 @@ for dir in */; do
 	pushd "$dir"
 	if [ -f ./tools/buildpackage.sh ]; then
 		./tools/buildpackage.sh
-	else
-		mk-build-deps
-		sudo apt install -y -- ./*.deb
-		dpkg-buildpackage -us -uc -b
 	fi
+
+	mk-build-deps
+	sudo apt install -y -- ./*.deb
+	dpkg-buildpackage -us -uc -b
+
 	popd
 done
