@@ -4,6 +4,7 @@ set -e
 set -x
 
 sudo apt update
+sudo apt dist-upgrade
 sudo apt install -y devscripts equivs build-essential
 
 for dir in */; do
@@ -13,8 +14,9 @@ for dir in */; do
 	fi
 
 	mk-build-deps
-	sudo apt install -y -- ./*.deb
+	sudo apt install -y -- ./*deps.deb
 	dpkg-buildpackage -us -uc -b
-
+	sudo apt install -y -- \*-build-deps
+	sudo apt autoremove
 	popd
 done
