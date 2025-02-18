@@ -16,13 +16,8 @@ jobs:
       contents: write
     runs-on: ubuntu-latest
     container:
-      image: ubuntu:24.04
+      image: blackdesk/action:latest
     steps:
-      - name: Install some packages
-        run: |
-          apt update
-          apt install -y git sudo
-
       - uses: actions/checkout@v4
         with:
           submodules: true
