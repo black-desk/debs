@@ -13,7 +13,8 @@ for dir in */; do
 		./tools/buildpackage.sh
 	fi
 
-	mk-build-deps --install --root-cmd sudo --remove
+	mk-build-deps
+	sudo apt install -- \*.deb
 	DEB_BUILD_OPTIONS="nocheck" dpkg-buildpackage -us -uc -b
 	sudo apt remove -y -- \*-build-deps
 	sudo apt autoremove
