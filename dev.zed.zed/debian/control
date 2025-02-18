@@ -3,8 +3,7 @@ Maintainer: Chen Linxuan <me@black-desk.cn>
 Section: devel
 Priority: optional
 Standards-Version: 4.6.2
-Build-Depends: wget,
-               debhelper-compat (= 13)
+Build-Depends: debhelper-compat (= 13), libasound2-dev, wget
 
 Package: dev.zed.zed
 Architecture: amd64
