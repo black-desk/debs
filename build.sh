@@ -13,10 +13,9 @@ for dir in */; do
 		./tools/buildpackage.sh
 	fi
 
-	mk-build-deps
-	sudo apt install -y -- ./*.deb
-	dpkg-buildpackage -us -uc -b
-	sudo apt install -y -- \*-build-deps
+	mk-build-deps --install --root-cmd sudo --remove
+	DEB_BUILD_OPTIONS="nocheck" dpkg-buildpackage -us -uc -b
+	sudo apt remove -y -- \*-build-deps
 	sudo apt autoremove
 	popd
 done
