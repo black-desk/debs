@@ -14,7 +14,7 @@ for dir in */; do
 	fi
 
 	mk-build-deps
-	sudo apt install -y -- ./*deps.deb
+	sudo apt install -y -- ./*.deb
 	dpkg-buildpackage -us -uc -b
 	sudo apt install -y -- \*-build-deps
 	sudo apt autoremove
