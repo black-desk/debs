@@ -17,7 +17,6 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: blackdesk/action:latest
-      options: --user=1001
     steps:
       - uses: actions/checkout@v4
         with:
