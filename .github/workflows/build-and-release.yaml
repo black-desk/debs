@@ -21,7 +21,9 @@ jobs:
       - uses: actions/checkout@v4
         with:
           submodules: true
-
+  
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3
       - name: Build packages
         run: ./build.sh
 
