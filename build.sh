@@ -4,7 +4,7 @@ set -e
 set -x
 
 sudo apt update
-sudo apt dist-upgrade
+sudo apt dist-upgrade -y
 sudo apt install -y devscripts equivs build-essential
 
 for dir in */; do
