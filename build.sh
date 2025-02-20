@@ -17,6 +17,6 @@ for dir in */; do
 	sudo apt install -- ./*.deb
 	DEB_BUILD_OPTIONS="nocheck" dpkg-buildpackage -us -uc -b
 	sudo apt remove -y -- \*-build-deps
-	sudo apt autoremove
+	sudo apt autoremove -y
 	popd
 done
