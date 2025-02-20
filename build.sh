@@ -3,17 +3,9 @@
 set -e
 set -x
 
-if [ "$(id -u)" != "0" ]; then
-	echo "This script must be run as root" 1>&2
-	exit 1
-fi
-
-export DEBIAN_FRONTEND=noninteractive
-export DEBIAN_BUILD_OPTIONS="nocheck"
-
-apt update
-apt dist-upgrade
-apt install devscripts equivs build-essential
+sudo apt update
+sudo apt dist-upgrade -y
+sudo apt install -y devscripts equivs build-essential
 
 for dir in */; do
 	pushd "$dir"
@@ -21,8 +13,10 @@ for dir in */; do
 		./tools/buildpackage.sh
 	fi
 
-	mk-build-deps --install --remove
-	dpkg-buildpackage --unsign-source --unsign-changes --build=binary
-	apt autoremove -- \*-build-deps
+	mk-build-deps
+	sudo apt install -y -- ./*.deb
+	DEB_BUILD_OPTIONS="nocheck" dpkg-buildpackage -us -uc -b
+	sudo apt remove -y -- \*-build-deps
+	sudo apt autoremove -y
 	popd
 done
