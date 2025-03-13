@@ -19,7 +19,7 @@ unpack: download
 download: neovide-linux-x86_64.tar.gz.zip
 
 neovide-linux-x86_64.tar.gz.zip:
-	wget https://github.com/neovide/neovide/releases/latest/download/neovide-linux-x86_64.tar.gz.zip
+	wget https://github.com/neovide/neovide/releases/latest/download/neovide-linux-x86_64.tar.gz
 
 .PHONY: install
 install:
