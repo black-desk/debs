@@ -22,7 +22,7 @@ jobs:
         with:
           submodules: true
       - run: git config --system --add safe.directory '*'
-  
+
       - name: Build packages
         run: ./build.sh
 
