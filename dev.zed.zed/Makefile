@@ -11,10 +11,9 @@ unpack: download
 	mkdir -p opt
 	rm -rf opt/dev.zed.Zed
 	mv zed.app opt/dev.zed.Zed
-	sed -i '/\[Desktop Entry\]/a StartupWMClass=dev.zed.Zed' opt/dev.zed.Zed/share/applications/zed.desktop
-	sed -i '/StartupNotify=true/d' opt/dev.zed.Zed/share/applications/zed.desktop
-	sed -i 's/Exec=zed/Exec=\/opt\/dev.zed.Zed\/bin\/zed/' opt/dev.zed.Zed/share/applications/zed.desktop
-	mv opt/dev.zed.Zed/share/applications/zed.desktop opt/dev.zed.Zed/share/applications/dev.zed.Zed.desktop
+	sed -i '/\[Desktop Entry\]/a StartupWMClass=dev.zed.Zed' opt/dev.zed.Zed/share/applications/dev.zed.Zed.desktop
+	sed -i '/StartupNotify=true/d' opt/dev.zed.Zed/share/applications/dev.zed.Zed.desktop
+	sed -i 's/Exec=zed/Exec=\/opt\/dev.zed.Zed\/bin\/zed/' opt/dev.zed.Zed/share/applications/dev.zed.Zed.desktop
 
 .PHONY: download
 download: zed-linux-x86_64.tar.gz
