@@ -8,6 +8,10 @@ sudo apt dist-upgrade -y
 sudo apt install -y devscripts equivs build-essential
 
 for dir in */; do
+	if [[ "$dir" = "LICENSES/" ]]; then
+		continue
+	fi
+
 	pushd "$dir"
 	if [ -f ./tools/buildpackage.sh ]; then
 		./tools/buildpackage.sh
