@@ -3,19 +3,18 @@ name: Checks
 on: [pull_request]
 
 jobs:
-  checks:
-    name: Run black-desk/checks
-    permissions:
-      checks: write
-      contents: read
-      pull-requests: write
+  generic:
     runs-on: ubuntu-latest
     steps:
-      - uses: black-desk/checks@master
+      - uses: black-desk/workflows/generic@master
   pass:
-    name: Pass
-    needs: [checks]
+    name: pass
+    if: always()
+    needs:
+      - generic
     runs-on: ubuntu-latest
     steps:
-      - name: Placeholder
-        run: true
+      - name: Decide whether the needed jobs succeeded or failed
+        uses: re-actors/alls-green@release/v1
+        with:
+          jobs: ${{ toJSON(needs) }}
