@@ -18,7 +18,7 @@ jobs:
     container:
       image: blackdesk/action:latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
         with:
           submodules: true
       - run: git config --system --add safe.directory '*'
